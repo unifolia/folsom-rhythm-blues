@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Folsom Rhythm Blues</title>
+  </head>
+  <body>
+    <header>
+      <h1>Folsom Rhythm Blues</h1>
+      <h2>Polyrhythmic chord progressions (BETA)</h2>
+    </header>
+    <div class="controls">
+      <div>
+        <div>
+          <label for="polyOne">Beat A</label>
+          <input type="range" min="1" max="20" value="4" id="polyOne" />
+          <h3>Division: <span class="polyOne">4</span></h3>
+        </div>
+        <div>
+          <label for="polyTwo">Beat B</label>
+          <input type="range" min="1" max="20" value="3" id="polyTwo" />
+          <h3>Division: <span class="polyTwo">3</span></h3>
+        </div>
+        <div>
+          <label for="tempo">Tempo</label>
+          <input type="range" min="30" max="200" value="120" id="tempo" />
+          <h3>Tempo: <span class="tempo">120</span></h3>
+        </div>
+        <div>
+          <label for="volume">Gain</label>
+          <input type="range" min="1" max="10" value="5" id="volume" />
+          <h3>Gain: <span class="volume">5</span></h3>
+        </div>
+        <div class="progressions">
+          <h3>Chord Progression</h3>
+          <form>
+            <div class="radioContainer">
+              <label for="blues">Folsom Blues</label><br />
+              <input
+                type="radio"
+                id="blues"
+                name="progression"
+                value="1"
+                checked
+              />
+            </div>
+            <div class="radioContainer">
+              <label for="wonderwall">Wondersprawl</label><br />
+              <input
+                type="radio"
+                id="wonderwall"
+                name="progression"
+                value="2"
+              />
+            </div>
+            <div class="radioContainer">
+              <label for="sealKiss">Kiss from a Seal</label>
+              <input type="radio" id="sealKiss" name="progression" value="3" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div><button id="play">Play</button></div>
+      <div class="drone">
+        <label for="drone">Drone Mode</label
+        ><input type="checkbox" name="drone" id="check" />
+      </div>
+    </div>
+    <script src="./poly.js"></script>
+  </body>
+</html>

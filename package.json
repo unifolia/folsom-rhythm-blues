@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/webmidi": "^2.0.6",
+    "esbuild": "0.16.5"
+  },
+  "scripts": {
+    "build": "esbuild poly.ts --bundle --minify --outfile=poly.js"
+  }
+}

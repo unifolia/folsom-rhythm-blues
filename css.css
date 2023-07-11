@@ -1,0 +1,80 @@
+body,
+.controls,
+.controls div {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: monospace;
+  text-shadow: 0px 0px 0.5px white;
+  height: 100vh;
+
+  align-items: center;
+
+  margin: 35px 0;
+  min-width: 280px;
+  box-sizing: border-box;
+
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    81deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 16s ease infinite;
+}
+
+header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+input {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+.controls > div {
+  justify-content: center;
+  align-items: center;
+}
+
+.controls div div {
+  margin-bottom: 15px;
+}
+
+.progressions h3 {
+  text-align: center;
+}
+
+.progressions input {
+  margin-right: 20px;
+}
+
+div.radioContainer {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.drone {
+  margin: 50px 0px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
