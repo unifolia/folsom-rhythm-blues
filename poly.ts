@@ -17,7 +17,7 @@ let volume: number = +volumeButton.value;
 let rhythmOne: number, rhythmTwo: number, barUtility: number, speed: number;
 // "drone" acts as this strange multiplier to note length but not overall tempo
 // reminiscent of a distorted dulcimer of sorts
-let drone: number = 0.025;
+let drone: number = 0.01875;
 
 let isPlaying = false;
 
@@ -150,8 +150,8 @@ playButton.addEventListener("click", () => {
 });
 
 droneButton.addEventListener("click", () => {
-  if (drone === 0.025) drone = drone * 30;
-  else drone = 0.025;
+  if (drone === 0.01875) drone = drone * 40;
+  else drone = 0.01875;
 });
 
 // controls

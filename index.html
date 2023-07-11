@@ -41,10 +41,9 @@
   <body>
     <header>
       <h1>Folsom Rhythm Blues</h1>
-      <h2>Polyrhythmic chord progressions (BETA)</h2>
     </header>
     <div class="controls">
-      <div>
+      <div class="sliders">
         <div>
           <label for="polyOne">Beat A</label>
           <input type="range" min="1" max="20" value="4" id="polyOne" />
@@ -57,7 +56,7 @@
         </div>
         <div>
           <label for="tempo">Tempo</label>
-          <input type="range" min="30" max="200" value="120" id="tempo" />
+          <input type="range" min="40" max="218" value="120" id="tempo" />
           <h3>Tempo: <span class="tempo">120</span></h3>
         </div>
         <div>
@@ -65,36 +64,33 @@
           <input type="range" min="1" max="10" value="5" id="volume" />
           <h3>Gain: <span class="volume">5</span></h3>
         </div>
-        <div class="progressions">
-          <h3>Chord Progression</h3>
-          <form>
-            <div class="radioContainer">
-              <label for="blues">Folsom Blues</label><br />
-              <input
-                type="radio"
-                id="blues"
-                name="progression"
-                value="1"
-                checked
-              />
-            </div>
-            <div class="radioContainer">
-              <label for="wonderwall">Wondersprawl</label><br />
-              <input
-                type="radio"
-                id="wonderwall"
-                name="progression"
-                value="2"
-              />
-            </div>
-            <div class="radioContainer">
-              <label for="sealKiss">Kiss from a Seal</label>
-              <input type="radio" id="sealKiss" name="progression" value="3" />
-            </div>
-          </form>
-        </div>
       </div>
-      <div><button id="play">Play</button></div>
+      <div class="progressions">
+        <h3>Chord Progression</h3>
+        <form>
+          <div class="radioContainer">
+            <label for="blues">Folsom Blues</label><br />
+            <input
+              type="radio"
+              id="blues"
+              name="progression"
+              value="1"
+              checked
+            />
+          </div>
+          <div class="radioContainer">
+            <label for="wonderwall">Wondersprawl</label><br />
+            <input type="radio" id="wonderwall" name="progression" value="2" />
+          </div>
+          <div class="radioContainer">
+            <label for="sealKiss">Kiss from a Seal</label>
+            <input type="radio" id="sealKiss" name="progression" value="3" />
+          </div>
+        </form>
+      </div>
+      <div class="playContainer">
+        <button id="play" class="play">Play</button>
+      </div>
       <div class="drone">
         <label for="drone">Drone Mode</label
         ><input type="checkbox" name="drone" id="check" />
