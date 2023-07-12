@@ -77,6 +77,7 @@ h1 .dotB {
 h2 {
   font-size: 1rem;
   margin-bottom: 30px;
+  padding: 0 10px;
 }
 
 .controls {
@@ -304,6 +305,10 @@ input[type="checkbox"]:checked::before {
   h1 .dotA,
   h1 .dotB {
     top: 85px;
+  }
+  .progressions {
+    box-sizing: border-box;
+    width: 95%;
   }
 }
 

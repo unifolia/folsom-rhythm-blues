@@ -23,6 +23,15 @@ let drone: number = 0.01995;
 
 let isPlaying = false;
 
+setInterval(() => {
+  dotA.style.backgroundColor = "#22c1c3ba";
+  dotB.style.backgroundColor = "#d69916";
+}, 3000);
+setInterval(() => {
+  dotA.style.backgroundColor = "#d69916";
+  dotB.style.backgroundColor = "#22c1c3ba";
+}, 4000);
+
 const createAudioContext = async () => {
   audioContext = new window.AudioContext();
 };
@@ -44,7 +53,7 @@ const folsomBlues = () => {
   shiftNotes();
 };
 
-const wondersprawl = () => {
+const wonderwall = () => {
   if (bar > 4) bar = 1;
   if (bar === 1) scale = chordLibrary.eminor;
   if (bar === 2) scale = chordLibrary.gmajor;
@@ -53,7 +62,24 @@ const wondersprawl = () => {
   shiftNotes();
 };
 
-const kiss = () => {
+const creep = () => {
+  if (bar > 8) bar = 1;
+  if (bar === 1) scale = chordLibrary.gmajor;
+  if (bar === 3) scale = chordLibrary.bmajor;
+  if (bar === 5) scale = chordLibrary.cmajor.map((n) => n + 12);
+  if (bar === 7) scale = chordLibrary.cminor.map((n) => n + 12);
+  shiftNotes();
+};
+
+const whatsup = () => {
+  if (bar > 8) bar = 1;
+  if (bar === 1 || bar === 7) scale = chordLibrary.cmajor;
+  if (bar === 3) scale = chordLibrary.dminor;
+  if (bar === 5) scale = chordLibrary.fmajor;
+  shiftNotes();
+};
+
+const seal = () => {
   if (bar > 4) bar = 1;
   if (bar === 1) scale = chordLibrary.ebmajor;
   if (bar === 2) scale = chordLibrary.fmajor;
@@ -66,8 +92,10 @@ const chordProgression = () => {
 
   if (progression?.value) {
     if (+progression.value === 1) folsomBlues();
-    if (+progression.value === 2) wondersprawl();
-    if (+progression.value === 3) kiss();
+    if (+progression.value === 2) wonderwall();
+    if (+progression.value === 3) creep();
+    if (+progression.value === 4) whatsup();
+    if (+progression.value === 5) seal();
   }
 };
 
@@ -177,13 +205,3 @@ volumeButton.oninput = () => {
   document.querySelector(".volume").innerHTML = volumeButton.value;
   volume = +volumeButton.value;
 };
-
-// fun
-setInterval(() => {
-  dotA.style.backgroundColor = "#22c1c3ba";
-  dotB.style.backgroundColor = "#d69916";
-}, 6000);
-setInterval(() => {
-  dotA.style.backgroundColor = "#d69916";
-  dotB.style.backgroundColor = "#22c1c3ba";
-}, 8000);
