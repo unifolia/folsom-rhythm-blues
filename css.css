@@ -160,14 +160,14 @@ input {
 .play {
   cursor: pointer;
   font-size: 1.5rem;
-  padding: 17px 37.48px;
+  padding: 17px 36.98px;
   border-radius: 25px;
   border: 2.5px dashed cadetblue;
   background: #ffffff5e;
 }
 
 .play.playing {
-  padding: 17px 34.44px;
+  padding: 17px 33.94px;
   background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
 }
 
