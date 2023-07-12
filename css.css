@@ -308,7 +308,7 @@ input[type="checkbox"]:checked::before {
   }
   .progressions {
     box-sizing: border-box;
-    width: 95%;
+    width: 96%;
   }
 }
 
