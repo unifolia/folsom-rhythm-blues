@@ -7,6 +7,7 @@ html {
 body,
 button {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
 }
 
 body {
@@ -209,7 +210,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 25px;
   height: 25px;
-  border: 1.5px solid black;
+  border: 1.5px solid #1a1a1a;
   border-radius: 50%;
   background: linear-gradient(45deg, #66b3ff, #ffc34d);
   cursor: pointer;
@@ -218,7 +219,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  border: 1.5px solid black;
+  border: 1.5px solid #1a1a1a;
   border-radius: 50%;
   background: linear-gradient(45deg, #66b3ff, #ffc34d);
   cursor: pointer;
@@ -232,7 +233,7 @@ input[type="radio"] {
   margin: 0 30px 0 0;
   width: 23px;
   height: 23px;
-  border: 1.5px solid #000;
+  border: 1.5px solid #1a1a1a;
   border-radius: 50%;
   display: grid;
   place-content: center;
@@ -261,7 +262,7 @@ input[type="checkbox"] {
   font: inherit;
   width: 23px;
   height: 23px;
-  border: 1.5px solid #000;
+  border: 1.5px solid #1a1a1a;
   border-radius: 25px;
   display: grid;
   place-content: center;
