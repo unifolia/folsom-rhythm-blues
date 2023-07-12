@@ -156,8 +156,8 @@ playButton.addEventListener("click", () => {
 });
 
 droneButton.addEventListener("click", () => {
-  if (drone === 0.01875) drone = drone * 40;
-  else drone = 0.01875;
+  if (drone === 0.01995) drone = drone * 40;
+  else drone = 0.01995;
 });
 
 // controls
