@@ -130,12 +130,16 @@ const clearBeep = () => {
 };
 
 const start = () => {
+  playButton.classList.add("playing");
+
   setSpeed();
   loopBeep();
   playButton.innerText = "Stop";
 };
 
 const stop = () => {
+  playButton.classList.remove("playing");
+
   clearBeep();
   clearInterval(barUtility);
   bar = 1;
