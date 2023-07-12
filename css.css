@@ -23,6 +23,13 @@ body {
 
   background: linear-gradient(81deg, #d9f3f3 0%, #f2ebda 100%);
   background-size: 400% 400%;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body,
@@ -40,7 +47,6 @@ h1,
 h2 {
   text-align: center;
   text-transform: lowercase;
-  transition: all 0.666s;
 }
 
 h1 {
@@ -88,7 +94,7 @@ h2 {
 .sliders > div {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.116);
+  background: #ffffff5e;
   padding: 10px;
   border-radius: 25px;
   width: 40%;
@@ -116,6 +122,19 @@ input {
   justify-content: center;
   align-items: start;
   margin: 0 auto 30px;
+
+  padding: 5px 20px 15px;
+  background: #ffffff5e;
+  border-radius: 25px;
+}
+
+.progressions h3 {
+  margin: 18px 0;
+  text-align: center;
+}
+
+.progressions form {
+  width: 100%;
 }
 
 .progressions .radioContainer {
@@ -127,11 +146,6 @@ input {
 
 .progressions .radioContainer {
   margin-bottom: 10px;
-}
-
-.progressions h3 {
-  margin: 18px 0;
-  text-align: center;
 }
 
 .progressions input {
@@ -147,17 +161,18 @@ input {
   font-size: 1.5rem;
   padding: 10px 20px;
   border-radius: 25px;
-  border: 1.5px solid black;
+  border: 2.5px dashed cadetblue;
+  background: #ffffff5e;
 }
 
-.play:hover {
+.play.playing {
   background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
 }
 
 .drone {
   padding: 10px;
   margin: 50px auto 140px;
-  background: rgba(255, 255, 255, 0.116);
+  background: #ffffff5e;
   border-radius: 25px;
 }
 
@@ -200,7 +215,7 @@ input[type="radio"] {
   -moz-appearance: none;
   appearance: none;
   background: #fff;
-  margin: 0 20px 0 0;
+  margin: 0 30px 0 0;
   width: 23px;
   height: 23px;
   border: 1.5px solid #000;
@@ -289,5 +304,11 @@ input[type="checkbox"]:checked::before {
   h1 .dotA,
   h1 .dotB {
     top: 85px;
+  }
+}
+
+@media (hover: hover) {
+  .play:hover {
+    background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
   }
 }
