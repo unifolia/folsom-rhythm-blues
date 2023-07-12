@@ -19,7 +19,7 @@ let volume: number = +volumeButton.value;
 let rhythmOne: number, rhythmTwo: number, barUtility: number, speed: number;
 // "drone" acts as this strange multiplier to note length but not overall tempo
 // reminiscent of a distorted dulcimer of sorts
-let drone: number = 0.01875;
+let drone: number = 0.01995;
 
 let isPlaying = false;
 
@@ -28,7 +28,7 @@ const createAudioContext = async () => {
 };
 
 const setSpeed = () => {
-  speed = (60 / +tempoButton.value) * 4 * 1000;
+  speed = (60 / +tempoButton.value) * 4 * 1000 - 5;
 };
 
 const shiftNotes = () => {
