@@ -160,22 +160,34 @@ input {
 .play {
   cursor: pointer;
   font-size: 1.5rem;
-  padding: 16.5px 36.98px;
+  padding: 15px 35px;
   border-radius: 25px;
   border: 2.5px dashed cadetblue;
   background: #ffffff5e;
 }
 
 .play.playing {
-  padding: 16.5px 33.94px;
+  padding: 16.5px 33.93px;
   background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
 }
 
 .drone {
-  padding: 10px;
+  padding: 14px 12px;
   margin: 50px auto 140px;
   background: #ffffff5e;
   border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.drone label {
+  display: block;
+  text-align: center;
+}
+
+.play,
+.drone {
+  height: 90px;
+  width: 150px;
 }
 
 /* inputs */
@@ -245,7 +257,7 @@ input[type="checkbox"] {
   -moz-appearance: none;
   appearance: none;
   background-color: #fff;
-  margin: 10px auto 0;
+  margin: 8px auto 0;
   font: inherit;
   width: 23px;
   height: 23px;
