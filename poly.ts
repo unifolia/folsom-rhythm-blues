@@ -1,6 +1,8 @@
 import chordLibrary from "./utilities/chord-library";
 import noteCalculator from "./utilities/note-calculator";
 
+const dotA: HTMLSpanElement = document.querySelector(".dotA");
+const dotB: HTMLSpanElement = document.querySelector(".dotB");
 const polyOne: HTMLInputElement = document.querySelector("input#polyOne");
 const polyTwo: HTMLInputElement = document.querySelector("input#polyTwo");
 const tempoButton: HTMLInputElement = document.querySelector("input#tempo");
@@ -171,3 +173,13 @@ volumeButton.oninput = () => {
   document.querySelector(".volume").innerHTML = volumeButton.value;
   volume = +volumeButton.value;
 };
+
+// fun
+setInterval(() => {
+  dotA.style.backgroundColor = "#22c1c3ba";
+  dotB.style.backgroundColor = "#d69916";
+}, 6000);
+setInterval(() => {
+  dotA.style.backgroundColor = "#d69916";
+  dotB.style.backgroundColor = "#22c1c3ba";
+}, 8000);
