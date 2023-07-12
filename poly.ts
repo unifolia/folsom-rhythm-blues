@@ -1,6 +1,8 @@
 import chordLibrary from "./utilities/chord-library";
 import noteCalculator from "./utilities/note-calculator";
 
+const dotA: HTMLSpanElement = document.querySelector(".dotA");
+const dotB: HTMLSpanElement = document.querySelector(".dotB");
 const polyOne: HTMLInputElement = document.querySelector("input#polyOne");
 const polyTwo: HTMLInputElement = document.querySelector("input#polyTwo");
 const tempoButton: HTMLInputElement = document.querySelector("input#tempo");
@@ -17,7 +19,7 @@ let volume: number = +volumeButton.value;
 let rhythmOne: number, rhythmTwo: number, barUtility: number, speed: number;
 // "drone" acts as this strange multiplier to note length but not overall tempo
 // reminiscent of a distorted dulcimer of sorts
-let drone: number = 0.025;
+let drone: number = 0.01875;
 
 let isPlaying = false;
 
@@ -150,8 +152,8 @@ playButton.addEventListener("click", () => {
 });
 
 droneButton.addEventListener("click", () => {
-  if (drone === 0.025) drone = drone * 30;
-  else drone = 0.025;
+  if (drone === 0.01875) drone = drone * 40;
+  else drone = 0.01875;
 });
 
 // controls
@@ -171,3 +173,13 @@ volumeButton.oninput = () => {
   document.querySelector(".volume").innerHTML = volumeButton.value;
   volume = +volumeButton.value;
 };
+
+// fun
+setInterval(() => {
+  dotA.style.backgroundColor = "#22c1c3ba";
+  dotB.style.backgroundColor = "#d69916";
+}, 6000);
+setInterval(() => {
+  dotA.style.backgroundColor = "#d69916";
+  dotB.style.backgroundColor = "#22c1c3ba";
+}, 8000);

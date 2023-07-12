@@ -1,7 +1,9 @@
 const major = [1, 5, 8, 13];
 const minor = [1, 4, 8, 13];
+
 const flat7 = [1, 1, 5, 8, 11];
 const sus4 = [1, 1, 6, 8, 11];
+const maj7 = [1, 5, 8, 12];
 
 const transpositionmap = {
   e: 4,
@@ -24,6 +26,7 @@ const chordLibrary = {
   cmajor: major,
   cminor: minor,
   c7: flat7,
+  cmaj7: maj7,
   //
   dmajor: major.map((n) => n + d),
   dminor: minor.map((n) => n + d),
@@ -39,6 +42,7 @@ const chordLibrary = {
   //
   fmajor: major.map((n) => n + f),
   fminor: minor.map((n) => n + f),
+  fmaj7: maj7.map((n) => n + f),
   //
   gmajor: major.map((n) => n + g),
   gminor: minor.map((n) => n + g),
@@ -47,6 +51,7 @@ const chordLibrary = {
   amajor: major.map((n) => n + a),
   aminor: minor.map((n) => n + a),
   a7: flat7.map((n) => n + a),
+  amaj7: maj7.map((n) => n + a),
   asus4: sus4.map((n) => n + a),
   //
   bbmajor: major.map((n) => n + bb),
