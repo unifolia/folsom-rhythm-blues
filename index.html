@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C18H9WB939"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C18H9WB939");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A free, fun, creative, web-based, online metronome for practicing polyrhythms to various musical chord progressions"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,10 +51,11 @@
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0cc3aa" />
     <link rel="stylesheet" href="./css.css" />
     <title>Folsom Rhythm Blues</title>
   </head>
+
   <body>
     <header>
       <h1>
@@ -84,12 +102,20 @@
             />
           </div>
           <div class="radioContainer">
-            <label for="wonderwall">Wondersprawl</label><br />
+            <label for="wonderwall">Wonderwall</label><br />
             <input type="radio" id="wonderwall" name="progression" value="2" />
           </div>
           <div class="radioContainer">
-            <label for="sealKiss">Kiss from a Seal</label>
-            <input type="radio" id="sealKiss" name="progression" value="3" />
+            <label for="creep">Creep</label>
+            <input type="radio" id="creep" name="progression" value="3" />
+          </div>
+          <div class="radioContainer">
+            <label for="whatsup">I ii IV I</label>
+            <input type="radio" id="whatsup" name="progression" value="4" />
+          </div>
+          <div class="radioContainer">
+            <label for="seal">bVI VII I</label>
+            <input type="radio" id="seal" name="progression" value="5" />
           </div>
         </form>
       </div>
@@ -99,6 +125,10 @@
       <div class="drone">
         <label for="check">Drone Mode</label>
         <input type="checkbox" name="check" id="check" />
+      </div>
+      <div class="midi">
+        <label for="midi">MIDI Control</label>
+        <input type="checkbox" name="midi" id="midi" />
       </div>
     </div>
     <script src="./poly.js"></script>

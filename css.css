@@ -7,6 +7,7 @@ html {
 body,
 button {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
 }
 
 body {
@@ -77,6 +78,7 @@ h1 .dotB {
 h2 {
   font-size: 1rem;
   margin-bottom: 30px;
+  padding: 0 10px;
 }
 
 .controls {
@@ -159,21 +161,44 @@ input {
 .play {
   cursor: pointer;
   font-size: 1.5rem;
-  padding: 10px 20px;
+  padding: 15px 35px;
   border-radius: 25px;
   border: 2.5px dashed cadetblue;
   background: #ffffff5e;
 }
 
 .play.playing {
+  padding: 16.5px 33.93px;
   background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
 }
 
-.drone {
-  padding: 10px;
-  margin: 50px auto 140px;
+.drone,
+.midi {
+  padding: 14px 12px;
   background: #ffffff5e;
   border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.drone label,
+.midi label {
+  display: block;
+  text-align: center;
+}
+
+.play,
+.drone,
+.midi {
+  height: 90px;
+  width: 150px;
+}
+
+.drone {
+  margin: 30px auto 0;
+}
+
+.midi {
+  margin: 30px auto 140px;
 }
 
 /* inputs */
@@ -195,7 +220,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 25px;
   height: 25px;
-  border: 1.5px solid black;
+  border: 1.5px solid #1a1a1a;
   border-radius: 50%;
   background: linear-gradient(45deg, #66b3ff, #ffc34d);
   cursor: pointer;
@@ -204,7 +229,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  border: 1.5px solid black;
+  border: 1.5px solid #1a1a1a;
   border-radius: 50%;
   background: linear-gradient(45deg, #66b3ff, #ffc34d);
   cursor: pointer;
@@ -218,7 +243,7 @@ input[type="radio"] {
   margin: 0 30px 0 0;
   width: 23px;
   height: 23px;
-  border: 1.5px solid #000;
+  border: 1.5px solid #1a1a1a;
   border-radius: 50%;
   display: grid;
   place-content: center;
@@ -243,11 +268,11 @@ input[type="checkbox"] {
   -moz-appearance: none;
   appearance: none;
   background-color: #fff;
-  margin: 10px auto 0;
+  margin: 8px auto 0;
   font: inherit;
   width: 23px;
   height: 23px;
-  border: 1.5px solid #000;
+  border: 1.5px solid #1a1a1a;
   border-radius: 25px;
   display: grid;
   place-content: center;
@@ -260,7 +285,14 @@ input[type="checkbox"]::before {
   transform: scale(0);
   transition: 0.25s transform ease-in;
   border-radius: 25px;
+}
+
+.drone input[type="checkbox"]::before {
   background: linear-gradient(45deg, #f56262, #ffc34d, #9dee9d);
+}
+
+.midi input[type="checkbox"]::before {
+  background: linear-gradient(45deg, #6284f5, #884dff, #ee9da5);
 }
 
 input[type="checkbox"]:checked::before {
@@ -304,6 +336,10 @@ input[type="checkbox"]:checked::before {
   h1 .dotA,
   h1 .dotB {
     top: 85px;
+  }
+  .progressions {
+    box-sizing: border-box;
+    width: 96%;
   }
 }
 
