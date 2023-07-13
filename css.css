@@ -173,7 +173,7 @@ input {
 }
 
 .experimentalZone {
-  margin: 75px 0 0 0;
+  margin: 75px 0 140px;
 }
 
 h4 {
@@ -202,12 +202,9 @@ h4 {
   width: 150px;
 }
 
-.drone {
-  margin: 30px auto 0;
-}
-
+.drone,
 .midi {
-  margin: 30px auto 140px;
+  margin: 30px auto 0;
 }
 
 /* inputs */
