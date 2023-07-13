@@ -172,6 +172,15 @@ input {
   background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
 }
 
+.experimentalZone {
+  margin: 75px 0 140px;
+}
+
+h4 {
+  text-align: center;
+  margin: 0;
+}
+
 .drone,
 .midi {
   padding: 14px 12px;
@@ -193,12 +202,9 @@ input {
   width: 150px;
 }
 
-.drone {
-  margin: 30px auto 0;
-}
-
+.drone,
 .midi {
-  margin: 30px auto 140px;
+  margin: 30px auto 0;
 }
 
 /* inputs */
