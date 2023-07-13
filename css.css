@@ -172,23 +172,33 @@ input {
   background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
 }
 
-.drone {
+.drone,
+.midi {
   padding: 14px 12px;
-  margin: 50px auto 140px;
   background: #ffffff5e;
   border-radius: 25px;
   box-sizing: border-box;
 }
 
-.drone label {
+.drone label,
+.midi label {
   display: block;
   text-align: center;
 }
 
 .play,
-.drone {
+.drone,
+.midi {
   height: 90px;
   width: 150px;
+}
+
+.drone {
+  margin: 30px auto 0;
+}
+
+.midi {
+  margin: 30px auto 140px;
 }
 
 /* inputs */
@@ -275,7 +285,14 @@ input[type="checkbox"]::before {
   transform: scale(0);
   transition: 0.25s transform ease-in;
   border-radius: 25px;
+}
+
+.drone input[type="checkbox"]::before {
   background: linear-gradient(45deg, #f56262, #ffc34d, #9dee9d);
+}
+
+.midi input[type="checkbox"]::before {
+  background: linear-gradient(45deg, #6284f5, #884dff, #ee9da5);
 }
 
 input[type="checkbox"]:checked::before {
