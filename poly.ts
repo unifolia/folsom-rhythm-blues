@@ -5,7 +5,7 @@ import noteCalculator from "./utilities/note-calculator";
 const dotA: HTMLSpanElement = document.querySelector(".dotA");
 const dotB: HTMLSpanElement = document.querySelector(".dotB");
 const spanA = document.querySelector(".polyOne");
-const spanB = document.querySelector(".polyOne");
+const spanB = document.querySelector(".polyTwo");
 const spanC = document.querySelector(".tempo");
 const spanD = document.querySelector(".volume");
 const polyOne: HTMLInputElement = document.querySelector("input#polyOne");
