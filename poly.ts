@@ -14,7 +14,6 @@ const tempoButton: HTMLInputElement = document.querySelector("input#tempo");
 const volumeButton: HTMLInputElement = document.querySelector("input#volume");
 const playButton: HTMLButtonElement = document.querySelector("#play");
 const droneButton: HTMLInputElement = document.querySelector("#check");
-const midiButton: HTMLInputElement = document.querySelector("#midi");
 
 // Variables and such
 let audioContext: AudioContext;
@@ -28,8 +27,6 @@ let rhythmOne: number, rhythmTwo: number, barUtility: number, speed: number;
 // reminiscent of a distorted dulcimer of sorts
 let drone: number = 0.01995;
 let isPlaying = false;
-let midiRequested = false;
-let midi = false;
 
 // Dot boops and beeps
 setInterval(() => {
@@ -40,57 +37,6 @@ setInterval(() => {
   dotA.style.backgroundColor = "#d69916";
   dotB.style.backgroundColor = "#22c1c3ba";
 }, 4000);
-
-const handleMidi = () => {
-  navigator?.requestMIDIAccess({ sysex: true })?.then(
-    (midiAccess: any): void | PromiseLike<void> => {
-      type MIDIResponse = { data: [number, number, number?] };
-
-      setSpeed();
-
-      midiAccess.inputs.forEach(
-        (input: any) =>
-          (input.onmidimessage = (event: MIDIResponse) => {
-            const note = event.data.length === 3;
-            const roliSlide = event.data[0] > 175;
-            const knob = event.data[1];
-            const on = event.data[2] !== 0;
-
-            if (midi === true && note && on) {
-              if (+knob === 22) {
-                polyOne.value = (event.data[2] / 6.35).toString();
-                spanA.innerHTML = polyOne.value;
-                return;
-              }
-              if (+knob === 23) {
-                polyTwo.value = (event.data[2] / 6.35).toString();
-                spanB.innerHTML = polyTwo.value;
-                return;
-              }
-              if (+knob === 24) {
-                tempoButton.value = (event.data[2] * 1.716535).toString();
-                spanC.innerHTML = tempoButton.value;
-                return;
-              }
-              if (+knob === 25) {
-                volumeButton.value = (event.data[2] / 12.7).toString();
-                spanD.innerHTML = volumeButton.value;
-                volume = +volumeButton.value;
-                return;
-              }
-
-              if (roliSlide) return;
-
-              beep(noteCalculator(+event.data[1] - 47), "center");
-            }
-          })
-      );
-    },
-    () => {
-      return;
-    }
-  );
-};
 
 const createAudioContext = async () => {
   audioContext = new window.AudioContext();
@@ -246,16 +192,6 @@ playButton.addEventListener("click", () => {
 droneButton.addEventListener("click", () => {
   if (drone === 0.01995) drone = drone * 40;
   else drone = 0.01995;
-});
-
-midiButton.addEventListener("click", () => {
-  if (!audioContext) createAudioContext();
-  if (!midiRequested) {
-    handleMidi();
-    midiRequested = true;
-  }
-
-  midi = !midi;
 });
 
 polyOne.oninput = () => {
