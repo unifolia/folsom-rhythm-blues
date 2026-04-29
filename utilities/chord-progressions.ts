@@ -61,6 +61,7 @@ const jazzCadence: Progression = {
     1: chordLibrary.dminor,
     2: chordLibrary.g7,
     3: chordLibrary.cmaj7,
+    4: chordLibrary.a7,
   },
 };
 
@@ -70,6 +71,7 @@ const tritoneSub: Progression = {
     1: chordLibrary.dminor,
     2: chordLibrary.db7,
     3: chordLibrary.cmaj7,
+    4: chordLibrary.eb7,
   },
 };
 
@@ -89,7 +91,7 @@ const minorBlues: Progression = {
 };
 
 const cycleOfFifths: Progression = {
-  length: 8,
+  length: 12,
   bars: {
     1: chordLibrary.aminor,
     2: chordLibrary.dminor,
@@ -97,8 +99,12 @@ const cycleOfFifths: Progression = {
     4: chordLibrary.cmajor,
     5: chordLibrary.fmajor,
     6: chordLibrary.bbmajor,
-    7: chordLibrary.emajor,
-    8: chordLibrary.aminor,
+    7: chordLibrary.ebmajor,
+    8: chordLibrary.abmajor,
+    9: chordLibrary.dbmajor,
+    10: chordLibrary.gbmajor,
+    11: chordLibrary.bmajor,
+    12: chordLibrary.e7,
   },
 };
 
@@ -184,11 +190,11 @@ const mixolydianRock: Progression = {
 };
 
 const soWhat: Progression = {
-  length: 8,
+  length: 32,
   bars: {
     1: chordLibrary.dminor,
-    5: chordLibrary.ebminor,
-    7: chordLibrary.dminor,
+    17: chordLibrary.ebminor,
+    25: chordLibrary.dminor,
   },
 };
 

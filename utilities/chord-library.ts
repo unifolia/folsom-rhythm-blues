@@ -1,5 +1,3 @@
-// The duplicated `1` in `7` and `sus4` weights the root so it's twice as
-// likely to be drawn when poly.ts randomly picks a note from the chord.
 const shapes = {
   major: [1, 5, 8, 13],
   minor: [1, 4, 8, 13],

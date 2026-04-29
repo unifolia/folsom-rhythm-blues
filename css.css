@@ -165,6 +165,7 @@ input {
   border-radius: 25px;
   border: 2.5px dashed cadetblue;
   background: #ffffff5e;
+  transition: all 0.4s linear;
 }
 
 .play.playing {
@@ -352,5 +353,6 @@ input[type="checkbox"]:checked::before {
 @media (hover: hover) {
   .play:hover {
     background: linear-gradient(45deg, #66b3ff99, #ffc34d99);
+    border-radius: 50px;
   }
 }
