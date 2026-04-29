@@ -1,19 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-C18H9WB939"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-C18H9WB939");
-    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -84,15 +71,15 @@
         </div>
         <div>
           <label for="volume">Gain</label>
-          <input type="range" min="1" max="10" value="5" id="volume" />
-          <h3>Gain: <span class="volume">5</span></h3>
+          <input type="range" min="1" max="10" value="3" id="volume" />
+          <h3>Gain: <span class="volume">3</span></h3>
         </div>
       </div>
       <div class="progressions">
         <h3>Chord Progression</h3>
         <form>
           <div class="radioContainer">
-            <label for="blues">Folsom Blues</label><br />
+            <label for="blues">Folsom Blues</label>
             <input
               type="radio"
               id="blues"
@@ -102,12 +89,30 @@
             />
           </div>
           <div class="radioContainer">
-            <label for="wonderwall">Wonderwall</label><br />
-            <input type="radio" id="wonderwall" name="progression" value="2" />
+            <label for="mixolydianRock">Mixolydian</label>
+            <input
+              type="radio"
+              id="mixolydianRock"
+              name="progression"
+              value="16"
+            />
           </div>
           <div class="radioContainer">
-            <label for="creep">Creep</label>
-            <input type="radio" id="creep" name="progression" value="3" />
+            <label for="phrygianVamp">Phrygian</label>
+            <input
+              type="radio"
+              id="phrygianVamp"
+              name="progression"
+              value="15"
+            />
+          </div>
+          <div class="radioContainer">
+            <label for="jazzCadence">Jazz Cadence</label>
+            <input type="radio" id="jazzCadence" name="progression" value="6" />
+          </div>
+          <div class="radioContainer">
+            <label for="tritoneSub">Tritone Sub</label>
+            <input type="radio" id="tritoneSub" name="progression" value="7" />
           </div>
           <div class="radioContainer">
             <label for="whatsup">I ii IV I</label>
@@ -116,6 +121,19 @@
           <div class="radioContainer">
             <label for="seal">bVI VII I</label>
             <input type="radio" id="seal" name="progression" value="5" />
+          </div>
+          <div class="radioContainer">
+            <label for="cycleOfFifths">Circle of Fifths</label>
+            <input
+              type="radio"
+              id="cycleOfFifths"
+              name="progression"
+              value="9"
+            />
+          </div>
+          <div class="radioContainer">
+            <label for="soWhat">So What</label>
+            <input type="radio" id="soWhat" name="progression" value="17" />
           </div>
         </form>
       </div>
