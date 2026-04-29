@@ -55,7 +55,6 @@ const seal: Progression = {
   },
 };
 
-// ii-V-I in C: the most fundamental jazz cadence.
 const jazzCadence: Progression = {
   length: 4,
   bars: {
@@ -65,7 +64,6 @@ const jazzCadence: Progression = {
   },
 };
 
-// Tritone-substituted ii-V-I: Db7 stands in for G7, sharing the B/F tritone.
 const tritoneSub: Progression = {
   length: 4,
   bars: {
@@ -75,7 +73,6 @@ const tritoneSub: Progression = {
   },
 };
 
-// Standard 12-bar minor blues in A.
 const minorBlues: Progression = {
   length: 12,
   bars: {
@@ -91,7 +88,6 @@ const minorBlues: Progression = {
   },
 };
 
-// Walking the cycle of fifths: i → iv → bVII → bIII → bVI → bII → V → i.
 const cycleOfFifths: Progression = {
   length: 8,
   bars: {
@@ -106,7 +102,6 @@ const cycleOfFifths: Progression = {
   },
 };
 
-// Pachelbel's Canon in D: I-V-vi-iii-IV-I-IV-V.
 const pachelbel: Progression = {
   length: 8,
   bars: {
@@ -121,7 +116,6 @@ const pachelbel: Progression = {
   },
 };
 
-// House of the Rising Sun: i-III-IV-VI-i-III-V-V.
 const risingSun: Progression = {
   length: 8,
   bars: {
@@ -135,7 +129,6 @@ const risingSun: Progression = {
   },
 };
 
-// Hotel California verse: i-V-bVII-IV-VI-III-iv-V in Bm.
 const hotelCalifornia: Progression = {
   length: 8,
   bars: {
@@ -150,7 +143,6 @@ const hotelCalifornia: Progression = {
   },
 };
 
-// All Along the Watchtower: i-bVII-bVI-bVII Aeolian vamp.
 const watchtower: Progression = {
   length: 4,
   bars: {
@@ -161,7 +153,6 @@ const watchtower: Progression = {
   },
 };
 
-// Andalusian cadence: i-bVII-bVI-V, the flamenco staircase.
 const andalusian: Progression = {
   length: 4,
   bars: {
@@ -172,7 +163,6 @@ const andalusian: Progression = {
   },
 };
 
-// Phrygian vamp: i-bII-bIII-bII, dark/Spanish color.
 const phrygianVamp: Progression = {
   length: 4,
   bars: {
@@ -183,7 +173,6 @@ const phrygianVamp: Progression = {
   },
 };
 
-// Mixolydian rock: I-bVII-IV-I (Sympathy for the Devil flavor).
 const mixolydianRock: Progression = {
   length: 4,
   bars: {
@@ -194,7 +183,6 @@ const mixolydianRock: Progression = {
   },
 };
 
-// "So What" modal jazz: 8 bars Dorian on D, lifted to Eb Dorian, then back.
 const soWhat: Progression = {
   length: 8,
   bars: {
@@ -204,7 +192,6 @@ const soWhat: Progression = {
   },
 };
 
-// Royal Road (J-pop / anime staple): IV-V-iii-vi.
 const royalRoad: Progression = {
   length: 4,
   bars: {
