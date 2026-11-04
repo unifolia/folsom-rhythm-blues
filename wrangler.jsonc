@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "folsom-rhythm-blues",
+  "compatibility_date": "2026-11-04",
+  "routes": [
+    { "pattern": "bellcast.engineering/metronome", "zone_name": "bellcast.engineering" },
+    { "pattern": "bellcast.engineering/metronome/*", "zone_name": "bellcast.engineering" }
+  ],
+  "assets": {
+    "directory": "./dist-cloudflare"
+  }
+}

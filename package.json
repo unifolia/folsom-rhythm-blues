@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "esbuild poly.ts --bundle --minify --target=es2016 --outfile=poly.js",
+    "build:cloudflare": "npm run build && node scripts/build-cloudflare.mjs",
     "watch": "esbuild poly.ts --bundle --target=es2016 --outfile=poly.js --watch",
     "typecheck": "tsc --noEmit"
   },
