@@ -6,7 +6,11 @@
     { "pattern": "bellcast.engineering/metronome", "zone_name": "bellcast.engineering" },
     { "pattern": "bellcast.engineering/metronome/*", "zone_name": "bellcast.engineering" }
   ],
+  "build": {
+    "command": "npm run build:cloudflare"
+  },
   "assets": {
     "directory": "./dist-cloudflare"
-  }
+  },
+  "previews": {}
 }
