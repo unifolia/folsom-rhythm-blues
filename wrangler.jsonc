@@ -12,5 +12,6 @@
   "assets": {
     "directory": "./dist-cloudflare"
   },
-  "previews": {}
+  "previews": {},
+  "preview_urls": true
 }
